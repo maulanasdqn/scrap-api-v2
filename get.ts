@@ -9,7 +9,7 @@ const PuppeteerBliBli = async (url: string) => {
     .use(StealthPlugin())
     .launch({
       headless: true,
-      executablePath: "/etc/profiles/per-user/ms/bin/google-chrome-stable",
+      executablePath: "/usr/bin/google-chrome-stable",
       args: [
         "--no-sandbox",
         "--disable-dev-shm-usage",
@@ -58,7 +58,7 @@ const PuppeteerShopee = async (url: string) => {
     .use(StealthPlugin())
     .launch({
       headless: true,
-      executablePath: "/etc/profiles/per-user/ms/bin/google-chrome-stable",
+      executablePath: process.env.BROWSER,
       args: [
         "--no-sandbox",
         "--disable-dev-shm-usage",
