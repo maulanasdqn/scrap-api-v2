@@ -1,0 +1,10 @@
+version: "3.8"
+services:
+  scrapper-api-v2:
+    stdin_open: true
+    build:
+      context: .
+      dockerfile: "Dockerfile"
+    container_name: scrapper-api-v2
+    ports:
+      - "80:3000"
